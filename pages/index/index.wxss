@@ -1,0 +1,297 @@
+.home {
+  background: #ffffff;
+}
+.home-header {
+  height: 334rpx;
+  width: 100%;
+  background: linear-gradient(90deg, #66AEFF 0%, #73B7FF 100%);
+}
+.home-header-img {
+  width: 100%;
+  height: 100%;
+}
+
+
+.home-content {
+  margin-top: 58rpx;
+  padding: 0 29rpx;
+}
+
+.home-x-k {
+  height: 183rpx;
+  margin: 28rpx 0 23rpx 0;
+  display: flex;
+  justify-content: space-around;
+  
+}
+.home-xk-cell {
+  display: flex;
+  align-items: center;
+  font-family: Source Han Sans SC;
+  font-weight: 400;
+  border-radius: 14rpx;
+  flex:1
+}
+.home-xk-icon {
+  width: 97rpx;
+  height: 98rpx;
+  margin: 0 17rpx 0 22rpx;
+}
+.home-xk-tit {
+  font-size: 34rpx;
+  line-height: 49rpx;
+}
+.home-xk-cell-xs {
+  background: linear-gradient(296deg, #CDE9FF 0%, #EEF9FF 100%);
+}
+.home-xk-cell-kq {
+  background: linear-gradient(296deg, #FDD36F 0%, #ECBD61 100%);
+}
+.home-xk-btm{
+  font-size: 22rpx;
+  line-height: 32rpx;
+}
+
+.home-c-fz {
+  height: 334rpx;
+  background: linear-gradient(119deg, #EEF8FF 0%, #CBE8FD 100%);
+  border-radius: 14rpx;
+  padding: 0 20rpx 21rpx 24rpx;
+  position: relative;
+}
+.home-fz-info-wap {
+  display: flex;
+}
+.home-c-fz-ren {
+  width: 256rpx;
+  height: 346rpx;
+  margin-top: -37rpx;
+}
+
+.home-fz-i-title {
+  font-size: 36rpx;
+  font-family: Alibaba PuHuiTi;
+  font-weight: 500;
+  line-height: 50rpx;
+  color: #000000;
+  margin: 25rpx 0 20rpx 0;
+}
+.home-c-fz-info {
+  margin-left: -17rpx;
+}
+.home-fz-i-cell {
+  display: flex;
+  margin-top: 10rpx;
+}
+.home-fz-cell-label {
+  height: 32rpx;
+  background: #FF9436;
+  border-radius: 5rpx;
+  padding: 0 7rpx;
+  font-size: 22rpx;
+  font-family: Alibaba PuHuiTi;
+  font-weight: 400;
+  line-height: 32rpx;
+  color: #FFFFFf;
+}
+.home-fz-cell-value {
+  font-size: 26rpx;
+  font-family: Alibaba PuHuiTi;
+  font-weight: 400;
+  line-height: 35rpx;
+  color: #5B5B5B;
+  margin-left: 18rpx;
+}
+.home-fz-v-img {
+  width: 31rpx;
+  height: 31rpx;
+  background: rgba(0, 0, 0, 0);
+  border: 2rpx solid #FFFFFF;
+  box-shadow: 0px 1rpx 6rpx rgba(0, 0, 0, 0.16);
+  border-radius: 50%;
+  margin-right: 12rpx;
+}
+.home-fz-v-flex {
+  display: flex;
+  align-items: center;
+}
+
+.home-fz-i-btn {
+  position: absolute;
+  bottom: 21rpx;
+  height: 60rpx;
+  border-radius: 30rpx;
+  line-height: 60rpx;
+  background: #ffffff;
+  width: 649rpx;
+  margin-top: -21rpx;
+  z-index: 111;
+  display: flex;
+  justify-content: space-between;
+  font-size: 22rpx;
+  font-family: Alibaba PuHuiTi;
+  font-weight: 400;
+}
+.home-fz-i-btn::before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  top: -20rpx;
+  left: 84rpx;
+  border-left: 20rpx solid transparent;
+  border-right: 20rpx solid transparent;
+  border-bottom: 20rpx solid #ffffff;
+}
+.home-fz-flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.home-fz-left {
+  flex: 1;
+  color: #0086E4;
+}
+.home-fz-right {
+  width: 228rpx;
+  height: 60rpx;
+  border-radius: 0 30rpx 30rpx 0; 
+  background: linear-gradient(180deg, #0086E4 0%, #0070BE 100%);
+  color: #ffffff;
+  position: relative;
+}
+.home-fz-right::after{
+  content: '';
+  position: absolute;
+  left: 0;
+  width: 0;
+  height: 0;
+  border-top: 60rpx solid #ffffff;
+  border-right: 20rpx solid transparent;
+}
+.home-fz-b-tz {
+  width: 26rpx;
+  height: 23rpx;
+  margin-right: 11rpx;
+}
+.home-fz-b-arrow {
+  width: 10rpx;
+  height: 18rpx;
+  margin-left: 13rpx;
+}
+
+
+.home-children {
+  margin-top: 38rpx;
+}
+.home-children-tit {
+  font-size: 36rpx;
+  font-family: Alibaba PuHuiTi;
+  font-weight: 400;
+  line-height: 50rpx;
+  color: #000000;
+  position: relative;
+  z-index: 1;
+}
+.home-children-tit::before {
+  content: "";
+  width: 318rpx;
+  height: 9rpx;
+  background: rgba(200, 226, 255, .8);
+  position: absolute;
+  bottom: 9rpx;
+  left: 0;
+  z-index: -1;
+}
+.home-children-info {
+  background: #EFF7FF;
+  position: relative;
+  border-radius: 14rpx;
+  margin-top: 33rpx;
+}
+.home-children-bj {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 345rpx;
+  height: 201rpx;
+}
+.home-children-info {
+  padding: 26rpx 22rpx;
+}
+.home-child-cell {
+  margin-bottom: 32rpx;
+}
+.home-child-cell:last-child {
+  margin-bottom: 0;
+}
+.home-child-cell-question {
+  justify-content: flex-start;
+}
+.home-child-cell-icon {
+  height: 34rpx;
+  width: 34rpx;
+  margin-right: 12rpx;
+}
+.home-child-cell-tit {
+  font-size: 32rpx;
+  font-family: Alibaba PuHuiTi;
+  font-weight: 400;
+  line-height: 44rpx;
+  color: #0085E4;
+}
+
+.home-child-cell-answer {
+  margin-top: 24rpx;
+  padding: 19rpx 11rpx 0 19rpx;
+  background: #ffffff;
+  border-radius: 4rpx 4rpx 33rpx 33rpx;
+}
+.home-answer-info {
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+.home-answer-tit {
+  flex: 1;
+  font-size: 30rpx;
+  font-family: Alibaba PuHuiTi;
+  font-weight: 400;
+  line-height: 57rpx;
+  color: #535353;
+}
+.home-answer-user {
+  width: 640rpx;
+  height: 118rpx;
+  margin: 19rpx 0 0 -40rpx;
+  border-radius: 59rpx;
+  background: linear-gradient(90deg, #FFE2AB 0%, rgba(255, 245, 226, 0.75) 25%, rgba(255, 245, 226, 0) 100%);
+  padding: 0 18rpx 0 14rpx;
+  font-size: 24rpx;
+  font-family: Alibaba PuHuiTi;
+  font-weight: 400;
+  line-height: 39rpx;
+}
+.home-answer-user-img {
+  height: 96rpx;
+  width: 96rpx;
+  border-radius: 48rpx;
+}
+.home-answer-user-info {
+  color: #535353;
+  margin-left: 20rpx;
+  flex: 1;
+}
+.home-answer-name {
+  font-size: 32rpx;
+  color: #313131;
+  margin-bottom: 5rpx;
+}
+.home-answer-btn {
+  width: 93rpx;
+  height: 43rpx;
+  line-height: 43rpx;
+  background: #FFDE9E;
+  border-radius: 22rpx;
+  font-size: 24rpx;
+  color: #B17400;
+}

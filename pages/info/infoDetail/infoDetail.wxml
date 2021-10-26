@@ -1,0 +1,43 @@
+<view class="info-d">
+    <back></back>
+    <view class="info-d-header">
+        <view class="info-d-h-tit">
+            <view>孙光洪</view>
+            <view class="info-d-mark mark">青苗医生</view>
+        </view>
+    </view>
+    <view class="info-d-content">
+        <view class="info-d-item" wx:for="{{dataItem}}" style="border-color: {{item.color}}" wx:key="index">
+            <view class="info-d-top">
+                <view class="info-d-top-tit info-d-tit-wap">
+                    <view>咬合诱导线上复诊</view>
+                    <view wx:if="{{item.type == 0}}" class="info-d-tit-mark mark">本次复诊</view>
+                    <view wx:if="{{item.type == 3}}" class="info-d-finish-mark mark">已完成</view>
+                </view>
+                <view class="info-top-text">
+                    复诊时间：2021/08/31
+                </view>
+                <view class="info-top-text" style="margin-top:6rpx">
+                    创建于2021/09/15
+                </view>
+            </view>
+            <view class="info-d-cell-wap">
+                <view class="info-d-cell" data-url="/pages/user/onlineRecord/onlineRecord" bind:tap="handleToPage">
+                    <view class="info-cell-left">查看复诊记录</view>
+                    <view class="info-cell-right">
+                        <view wx:if="{{item.type == 1}}" class="info-cell-r-value" style="color:#B9B9B9">无</view>
+                        <view wx:if="{{item.type == 2}}" class="info-cell-r-value" style="color:#B9B9B9">未开启</view>
+                        <image class="info-cell-r-arrow" src="/images/user/arrow.png" />
+                    </view>
+                </view>
+                <view class="info-d-cell" data-url="/pages/user/gtHistory/gtHistory" bind:tap="handleToPage">
+                    <view class="info-cell-left">查看沟通记录</view>
+                    <view class="info-cell-right">
+                        <view class="info-cell-r-value" style="color:#B9B9B9">无</view>
+                        <image class="info-cell-r-arrow" src="/images/user/arrow.png" />
+                    </view>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>

@@ -1,0 +1,54 @@
+.album {
+    height: 100%;
+    background-color: rgba(0, 0, 0, 1);
+    padding: 0 29rpx;
+    overflow: hidden;
+}
+.album-c-wap {
+    margin-top: 112rpx;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.album-fz-wap {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+}
+.album-fz {
+    width: 50rpx;
+    height: 39rpx;
+    margin: 0 50rpx 77rpx 0;
+}
+.album-close {
+    height: 70rpx;
+    width: 70rpx;
+    margin-top: 52rpx;
+}
+.album-content {
+    background-color: #fff;
+    border-radius: 14rpx;
+}
+.album-center {
+    border-bottom: 1rpx dashed #333;
+    border-top: 1rpx dashed #333;
+    height: 454rpx;
+    width: 692rpx;
+}
+.album-txt {
+    font-size: 32rpx;
+    font-family: Alibaba PuHuiTi;
+    font-weight: 400;
+    line-height: 44rpx;
+    color: #000000;
+    text-align: center;
+}
+.album-header {
+    height: 102rpx;
+    line-height: 102rpx;
+}
+.album-footer {
+    height: 91rpx;
+    line-height: 91rpx;
+    font-size: 28rpx;
+}

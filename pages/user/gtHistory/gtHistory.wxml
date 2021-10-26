@@ -1,0 +1,33 @@
+<view class="gt-history">
+    <back></back>
+    <view class="online-re-header">
+        <view class="online-re-h-tit">孙光红 沟通记录</view>
+    </view>
+    <view class="gt-history-time">2021年8月11日 咬合诱导线上复诊</view>
+    <view class="gt-history-date">昨天 15:22</view>
+    <!-- ---------- 聊天信息 ------------ -->
+    <view class="detail-chat-wap">
+        <view class="detail-chat-cell detail-chat-left" wx:for="{{4}}" wx:key="index">
+            <view class="detail-chat-img img">
+                <image mode="{{imageMode}}" src="/images/loginBj.png"></image>
+            </view>
+            <view class="detail-chat-info">
+                <view class="detail-chat-name">旭光红</view>
+                <view class="detail-chat-txt detail-chat-l-txt">
+                    要不您看您今天哪个时间段方便
+                </view>
+            </view>
+        </view>
+        <view class="detail-chat-cell detail-chat-right">
+            <view class="detail-chat-r-info">
+                <view class="detail-chat-name detail-chat-r-name">旭光红</view>
+                <view class="detail-chat-txt detail-chat-r-txt">
+                    要不您看您今天哪个时间段方便，咱们视频沟通一下
+                </view>
+            </view>
+            <view class="detail-chat-img img">
+                <image mode="{{imageMode}}" src="/images/loginBj.png"></image>
+            </view>
+        </view>
+    </view>
+</view>

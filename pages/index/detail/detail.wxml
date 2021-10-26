@@ -1,0 +1,56 @@
+<view class="detail">
+    <back></back>
+    <view class="detail-header">
+        <image class="detail-h-j" src="/images/home/detailBj.png"></image>
+        <view class="detail-h-txt">沟通记录</view>
+    </view>
+    <view class="detail-content">
+        <view class="detail-c-info">
+            <view class="detail-c-i-border"></view>
+            <view class="detail-c-title">本次复诊资料</view>
+        </view>
+
+        <!-- ---------- 预约信息 ------------ -->
+        <view class="detail-info-c-wap">
+            <view class="home-info-content">
+                <view class="home-info-c-item">
+                    <view class="home-info-label">复诊项目:</view>
+                    <view class="home-info-value">常规治疗复诊</view>
+                </view>
+                <view class="home-info-c-item">
+                    <view class="home-info-label">复诊时间:</view>
+                    <view class="home-info-value">2021年8月11日 12:30-21:00</view>
+                </view>
+                <view class="home-info-c-item">
+                    <view class="home-info-label">创建时间:</view>
+                    <view class="home-info-value">2021年8月11日</view>
+                </view>
+            </view>
+        </view>
+        <!-- ---------- 聊天信息 ------------ -->
+        <view class="detail-chat-wap">
+            <view class="detail-chat-cell detail-chat-left">
+                <view class="detail-chat-img img">
+                    <image mode="{{imageMode}}" src="/images/loginBj.png"></image>
+                </view>
+                <view class="detail-chat-info">
+                    <view class="detail-chat-name">旭光红</view>
+                    <view class="detail-chat-txt detail-chat-l-txt">
+                        要不您看您今天哪个时间段方便，咱们视频沟通一下
+                    </view>
+                </view>
+            </view>
+            <view class="detail-chat-cell detail-chat-right">
+                <view class="detail-chat-r-info">
+                    <view class="detail-chat-name detail-chat-r-name">旭光红</view>
+                    <view class="detail-chat-txt detail-chat-r-txt">
+                        要不您看您今天哪个时间段方便，咱们视频沟通一下
+                    </view>
+                </view>
+                <view class="detail-chat-img img">
+                    <image mode="{{imageMode}}" src="/images/loginBj.png"></image>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>

@@ -1,0 +1,16 @@
+<view class="finish">
+    <back></back>
+    <view class="history-header">
+        <view class="history-h-tit">青苗云服务中心</view>
+    </view>
+    <view class="finish-content">
+        <image class="finish-c-ya" src="/images/user/ya.png" />
+        <view class="finish-tj-info">提交复诊信息成功</view>
+        <view class="finish-tj-bl">医生会详细阅读病例资料、照片</view>
+        <view class="finish-tj-time">在48小时内给您回复</view>
+    </view>
+    <view class="finish-footer">
+        <button class="finish-f-btn" bind:tap="onJumpIndex">返回首页（{{countDownNum}}）</button>
+    </view>
+    
+</view>

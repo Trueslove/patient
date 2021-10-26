@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "back": "/components/back/back",
+    "date-time-picker": "/components/date/date"
+  },
+  "navigationStyle": "custom",
+  "navigationBarBackgroundColor": "#0087E4"
+}

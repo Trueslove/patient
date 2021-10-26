@@ -1,0 +1,15 @@
+<view class="album">
+    <view class="album-c-wap">
+        <view class="album-fz-wap">
+            <image class="album-fz" src="/images/photo/fanzhuan.png" />
+        </view>
+        <view class="album-content">
+            <view class="album-txt album-header">拍照示例</view>
+            <view class="album-center">
+                <image mode="{{imageMode}}" src="/images/photo/yaya.png" />
+            </view>
+            <view class="album-txt album-footer">注意咬紧后牙，可用手指拉开嘴角，充分暴露前牙</view>
+        </view>
+        <image class="album-close" src="/images/photo/close.png" />
+    </view>
+</view>

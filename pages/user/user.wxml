@@ -1,0 +1,82 @@
+<view class="user">
+    <view class="user-header">
+        <view class="user-h-info">
+            <view class="user-h-i-img img">
+                <image mode="{{imageMode}}" src="/images/loginBj.png" alt="" />
+            </view>
+            <view wx:if="{{!isPatient}}" class="user-h-i-r">
+                <view style="font-size: 24rpx;color: #B9B9B9;padding-top:21rpx">暂无家人信息</view>
+            </view>
+            <view wx:if="{{isPatient}}" class="user-h-i-r">
+                <view style="font-size: 50rpx;">吴金根</view>
+                <view style="font-size: 24rpx;color: #B9B9B9;margin:4rpx 0">10岁 男 2011年10月15日</view>
+                <view style="font-size: 24rpx;color: #B9B9B9;">15006701461</view>
+            </view>
+        </view>
+        <image class="user-h-img-bj" mode="{{imageMode}}" src="/images/user/headerBj.png" alt="" />
+    </view>
+    <view class="user-zh-wap">
+        <!-- ---------我的家人 --------- -->
+        <view class="user-zh-title">
+            <view>我的家人</view>
+            <view class="user-zh-tit-r">已绑定 2人</view>
+        </view>
+        <!-- ---------有患者状态 --------- -->
+        <view wx:if="{{isPatient}}">
+            <view>
+                <view class="user-zh-box">
+                    <view class="user-zh-box-num user-zh-box-num-p">9</view>
+                    <view class="user-zh-sex">
+                        <view class="user-zh-sex user-zh-sex-info">
+                            <image class="user-zh-sex-icon" src="/images/user/nv.png"></image>
+                            <view>赵璇海</view>
+                            <view class="user-zh-sex-mark">当前登陆</view>
+                        </view>
+                        <view class="user-zh-phone">15006701461</view>
+                    </view>
+                </view>
+                <view class="user-zh-box">
+                    <view class="user-zh-box-num user-zh-box-num-p">9</view>
+                    <view class="user-zh-sex">
+                        <view class="user-zh-sex user-zh-sex-info">
+                            <image class="user-zh-sex-icon" src="/images/user/nan.png"></image>
+                            <view>王明涛</view>
+                        </view>
+                        <view class="user-zh-phone">15006701461</view>
+                    </view>
+                    <view class="user-zh-box-ren">
+                        <image mode="{{imageMode}}" src="/images/user/ren.png" />
+                    </view>
+                </view>
+            </view>
+            <view class="user-zh-info">注：门诊新建患者，会在24小时内同步，请耐心等待。</view>
+        </view>
+        <!-- ---------无患者状态 --------- -->
+        <view wx:if="{{!isPatient}}">
+            <view class="user-zh-box user-zh-box-none">暂无家人信息</view>
+            <view class="user-zh-info-none">
+                <view class="user-zh-info user-zh-info-n">门诊新建患者，会在24小时内同步，请耐心等待。</view>
+                <view class="user-zh-info user-zh-info-n">如您未去过门诊，请联系
+                    <view class="user-zh-info-kqgj">口腔管家</view>
+                </view>
+            </view>
+        </view>
+        <!-- ---------常用功能 --------- -->
+        <view class="user-cygn">常用功能</view>
+        <view>
+            <view class="user-zh-cell" wx:for="{{cellItem}}" data-url="{{item.url}}" wx:key="index" bind:tap="handleToPage">
+                <image wx:if="{{isPatient}}" class="user-zh-sex-icon" src="{{item.icon}}"></image>
+                <image wx:if="{{!isPatient}}" class="user-zh-sex-icon" src="{{item.iconDisable || item.icon}}"></image>
+                <view class="user-zh-sex user-zh-sex-info user-zh-cell-r" style="color: {{!isPatient && !item.disable ? '#CDCDCD' : ''}}">
+                    <view class="">{{item.label}}</view>
+                    <view class="user-zh-cell-arrow">
+                        <view wx:if="{{item.num}}" class="user-zh-box-num user-zh-cell-num">
+                            {{item.num}}
+                        </view>
+                        <image class="user-zh-sex-icon-arrow" src="/images/home/arrow.png"></image>
+                    </view>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>

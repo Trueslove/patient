@@ -1,0 +1,25 @@
+<view class="login">
+    <view class="login-header">
+        <view class="login-h-title">
+            <view class="login-h-tit">育颜家</view>
+            <view>云上复诊平台</view>
+        </view>
+        <image class="login-h-img" src="/images/login/loginBj.png"></image>
+    </view>
+    <view class="login-content">
+        <view class="login-info-wap">
+            <input class="login-input" value="{{phone}}"/>
+            <view class="login-input-code">
+                <input class="login-input" value="{{code}}" placeholder="请输入验证码" maxlength="6"/>
+                <button wx:if="{{isShowNum}}" class="btn login-code-btn">{{sec}}秒</button>
+                <button wx:if="{{!isShowNum}}" class="btn login-code-btn" catchtap="getCode" style="width: 200rpx;">获取验证码</button>
+            </view>
+            <button class="btn login-login-btn">登录</button>
+            <view class="login-text">
+                请使用门诊预留手机号，如不详请咨询 
+                <view class="login-text-btn">口腔管家</view>
+            </view>
+        </view>
+
+    </view>
+</view>

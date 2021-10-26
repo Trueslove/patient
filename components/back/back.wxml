@@ -1,0 +1,3 @@
+<view class="back">
+    <image class="back-img" bindtap="handleBack" src="/images/home/back.png" />
+</view>

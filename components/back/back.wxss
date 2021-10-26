@@ -1,0 +1,11 @@
+/* components/back/back.wxss */
+.back-img {
+    width: 30rpx;
+    height: 20rpx;
+}
+.back {
+    position: fixed;
+    top: 55rpx;
+    left: 35rpx;
+    z-index: 10000;
+}

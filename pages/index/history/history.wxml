@@ -1,0 +1,77 @@
+<view class="history">
+    <back></back>
+    <view class="history-header">
+        <view class="history-h-tit">我的预约</view>
+    </view>
+    <view class="history-info-user">
+        <view class="history-left-info">
+            <view class="history-user-left img">
+                <image mode="{{imageMode}}" src="/images/loginBj.png"></image>
+            </view>
+            <!-- <view class="history-user-l-text">育颜家患者</view> -->
+        </view>
+        <view class="history-user-right">
+            <view class="history-user-100 history-user-flex">
+                <view class="history-user-name">周国辉</view>
+                <image class="history-user-sex-icon" src="/images/user/nv.png"></image>
+            </view>
+            <view class="history-user-100 history-user-r-i">
+                <view>0岁 18828838281</view>
+                <view>2009/10/12</view>
+            </view>
+            <!-- <view style="margin-top:-50rpx" class="history-user-100 history-user-flex history-user-between">
+                <view>2019/09/10</view>
+                <view>医助：青小淼</view>
+            </view> -->
+        </view>
+    </view>
+    <view class="history-content">
+        <view class="history-title">预约记录</view>
+        <view>
+            <view class="history-item-wap" wx:for="{{dataItem}}" wx:key="index">
+                <view class="history-item-l history-item-l-x {{item.type == 2 || item.type == 1 ? 'history-item-l-x-t' : ''}}" >
+                    <view class="history-i-time1">{{item.date}}</view>
+                    <view class="history-i-time2">{{item.year}}</view>
+                </view>
+                <view class="history-item-r">
+                    <view class="history-item-r-t history-item-r-flex">
+                        <view>{{item.title}}</view>
+                        <view wx:if="{{item.type != 2 && item.type != 1}}" class="history-item-r-x">线上</view>
+                        <view wx:elif="{{item.type == 1}}" class="history-item-r-x history-cancel">已取消</view>
+                    </view>
+                    <!-- -------- 预约信息 --------- -->
+                    <view class="history-i-r-cell-wap">
+                        <view class="history-i-r-cell">
+                            <view class="history-cell-label">预约医生:</view>
+                            <view>{{item.name}}</view>
+                        </view>
+                        <view class="history-i-r-cell">
+                            <view class="history-cell-label">预约项目:</view>
+                            <view>{{item.project}}</view>
+                        </view>
+                    </view>
+                    <view class="history-cell-dashed" wx:if="{{item.type == 1 || item.type == 2}}"></view>
+                    <!-- -------- 操作按钮 --------- -->
+                    <view>
+                        <button wx:if="{{item.type == 0}}" class="history-i-btn btn" data-type="online" data-url="/pages/user/onlineRecord/onlineRecord" bind:tap="handleToPage">
+                            开始线上复诊
+                        </button>
+                        <button wx:if="{{item.type == 3}}" class="history-i-btn btn" data-type="online" data-url="/pages/index/online/online" bind:tap="handleToPage">
+                            查看复诊记录
+                        </button>
+                        <button wx:if="{{item.type == 4}}" class="history-i-btn btn history-jxz-btn" data-type="online" data-url="/pages/index/online/online" bind:tap="handleToPage">
+                            复诊进行中
+                        </button>
+                        <button wx:if="{{item.type == 5}}" class="history-i-btn btn history-wdq-btn" data-type="online" data-url="/pages/index/online/online" bind:tap="handleToPage">
+                            未到期
+                        </button>
+                    </view>
+                    <view class="history-item-f">
+                        <view>青苗儿童口腔 - 成都锦江门诊</view>
+                        <view>创建于 2021-6-18</view>
+                    </view>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>

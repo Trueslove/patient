@@ -1,0 +1,262 @@
+<view class="fill-visit">
+    <back></back>
+    <view class="online-re-header">
+        <view class="online-re-h-tit">青苗云服务中心</view>
+    </view>
+    <!-- --------- step信息 ----------- -->
+    <view class="fill-step">
+        <view class="fill-step-cell {{stepIndex >= 0 ? 'step-active' : ''}}">
+            <view class="fill-step-num">1</view>
+            <view>资料</view>
+        </view>
+        <view class="fill-step-cell fill-step-cell-zp {{stepIndex >= 1 ? 'step-active' : ''}}">
+            <view class="fill-step-num">2</view>
+            <view>照片</view>
+        </view>
+        <view class="fill-step-cell {{stepIndex >= 2 ? 'step-active' : ''}}">
+            <view class="fill-step-num">3</view>
+            <view>确认</view>
+        </view>
+    </view>
+    <!-- --------- 资料 ----------- -->
+    <view wx:if="{{stepIndex == 0}}">
+        <!-- --------- 常规 ----------- -->
+        <view class="detail-chat-wap">
+            <view class="edit-form-cell-wap">
+                <view class="edit-form-cell">
+                    <view class="edit-cell-label">姓名</view>
+                    <view class="edit-cell-input">
+                        <input class="edit-input" placeholder-class="input-placeholder" placeholder="请输入姓名" type="text" />
+                    </view>
+                </view>
+                <view class="edit-form-cell">
+                    <view class="edit-cell-label">性别</view>
+                    <view class="edit-cell-input">
+                        <input class="edit-input" placeholder-class="input-placeholder" placeholder="请输入性别" type="text" />
+                    </view>
+                </view>
+                <view class="edit-form-cell">
+                    <view class="edit-cell-label">复诊医生</view>
+                    <view class="edit-cell-input">
+                        <input class="edit-input" placeholder-class="input-placeholder" placeholder="请输入复诊医生" type="text" />
+                    </view>
+                </view>
+                <view class="edit-form-cell">
+                    <view class="edit-cell-label">医生助理</view>
+                    <view class="edit-cell-input">
+                        <input class="edit-input" placeholder-class="input-placeholder" placeholder="请输入医生助理" type="text" />
+                    </view>
+                </view>
+                <view class="edit-form-cell">
+                    <view class="edit-cell-label">上次就诊时间</view>
+                    <view class="edit-cell-input" style="position: relative;">
+                        <date-time-picker style="flex:1;z-index:1" value="{{dateTime}}" bind:change="handleChange">
+                            {{dateTime}}
+                        </date-time-picker>
+                        <view style="color:#006AEF" class="edit-cell-input-yy" bind:change="handleChange">
+                            预约
+                        </view>
+                    </view>
+                </view>
+                <view class="edit-form-cell">
+                    <view class="edit-cell-label">年龄</view>
+                    <view class="edit-cell-input">
+                        <input class="edit-input" placeholder-class="input-placeholder" placeholder="请输入年龄" type="text" />
+                    </view>
+                </view>
+                <view class="edit-form-cell">
+                    <view class="edit-cell-label">请描述宝贝当前牙齿情况及想咨询医生的问题（必填)</view>
+                    <view class="edit-cell-textarea">
+                        <textarea class="edit-textarea" placeholder-class="input-placeholder" placeholder="如无问题，请填写‘无问题’。" type=""></textarea>
+                    </view>
+                </view>
+            </view>
+        </view>
+        <!-- --------- 问诊单 ----------- -->
+        <view class="detail-chat-wap">
+            <view class="detail-c-info edit-form-flex-c" style="padding-bottom:15rpx">
+                <view class="detail-c-i-border"></view>
+                <view class="detail-c-title">问诊单</view>
+            </view>
+            <view class="fill-visit-info">请您认真填写以下问诊单，医生在详细阅读您的病例资料、照片后，会在48小时内给您回复。</view>
+            <view class="edit-form-cell-wap">
+                <view class="edit-form-cell">
+                    <view class="edit-cell-label">请问宝贝是否有按医嘱佩戴诱导器？</view>
+                    <view class="edit-cell-type-wap">
+                        <view data-index="0" bindtap="handleChangeType" class="edit-cell-type {{activeIndex == 0 ? 'edit-type-active' : ''}}">
+                            是（默认）
+                        </view>
+                        <view data-index="1" bindtap="handleChangeType" class="edit-cell-type {{activeIndex == 1 ? 'edit-type-active' : ''}}">
+                            否
+                        </view>
+                    </view>
+                </view>
+                <view class="edit-form-cell">
+                    <view class="edit-cell-label">请说明没有按医嘱佩戴的原因</view>
+                    <view class="edit-cell-input">
+                        <input class="edit-input" placeholder-class="input-placeholder" placeholder="如感冒，鼻炎，无法坚持等" type="text" />
+                    </view>
+                </view>
+                <view class="edit-form-cell">
+                    <view class="edit-cell-label">宝贝平均每日佩戴小时数</view>
+                    <view class="edit-cell-input" style="position: relative;">
+                        <date-time-picker style="flex:1;z-index:1" value="{{dateTime}}" bind:change="handleChange">
+                            {{dateTime}}
+                        </date-time-picker>
+                        <view style="color:#006AEF" class="edit-cell-input-yy" bind:change="handleChange">
+                            选择
+                        </view>
+                    </view>
+                </view>
+                <view class="edit-form-cell">
+                    <view class="edit-cell-label">请问宝贝佩戴过程是否有不适</view>
+                    <view class="edit-cell-type-wap">
+                        <view data-index="0" bindtap="handleChangeType" class="edit-cell-type {{activeIndex == 0 ? 'edit-type-active' : ''}}">
+                            是
+                        </view>
+                        <view data-index="1" bindtap="handleChangeType" class="edit-cell-type {{activeIndex == 1 ? 'edit-type-active' : ''}}">
+                            否（默认）
+                        </view>
+                    </view>
+                </view>
+                <view class="edit-form-cell">
+                    <view class="edit-cell-label">请具体描述不适感</view>
+                    <view class="edit-cell-input">
+                        <input class="edit-input" placeholder-class="input-placeholder" placeholder="如诱导器有破损，压痛等" type="text" />
+                    </view>
+                </view>
+                <view class="edit-form-cell">
+                    <view class="edit-cell-label">请问您还有什么问题想问医生</view>
+                    <view class="edit-cell-textarea">
+                        <textarea class="edit-textarea" placeholder-class="input-placeholder" placeholder="请描述宝贝当前牙齿情况及想咨询医生的问题" type=""></textarea>
+                    </view>
+                </view>
+            </view>
+        </view>
+        <view class="fill-footer">
+            <view class="fill-footer-btn-wap fill-footer-photo">
+                <button class="fill-f-btn btn" data-index="1" bind:tap="handleChangeStep">
+                    下一步：上传照片
+                </button>
+           </view>
+        </view>
+    </view>
+    <!-- --------- 照片 ----------- -->
+    <view wx:if="{{stepIndex == 1}}">
+        <view class="detail-chat-wap fill-photo-wap">
+            <view class="fill-visit-info" style="width:100%">为保证复诊质量,请帮助宝贝拍摄以下口腔角度照片。</view>
+            <view class="fill-photo-cell" wx:for="{{photoItem}}" wx:key="index">
+                <view class="fill-p-cell-top" bind:tap="handleChooseImg">
+                    <image class="fill-p-img" src="../../images/photo/{{index + 1}}.png" />
+                    <image class="fill-p-icon" src="../../images/photo/photo.png" />
+                </view>
+                <view class="fill-p-cell-txt">{{item.label}}</view>
+            </view>
+        </view>
+        <view class="fill-footer">
+            <view class="fill-footer-btn-wap fill-footer-photo">
+                <button class="fill-f-btn btn" data-index="0" bind:tap="handleChangeStep" style="width:209rpx;background:#BBDEFF">
+                    上一步
+                </button>
+                <button class="fill-f-btn btn" data-index="2" bind:tap="handleChangeStep" style="width:455rpx">
+                    下一步：确认
+                </button>
+           </view>
+        </view>
+    </view>
+    <!-- --------- 确认 ----------- -->
+    <view wx:if="{{stepIndex == 2}}" style="padding-bottom: 148rpx">
+        <view class="detail-chat-wap">
+            <!-- 基本信息 -->
+            <view>
+                <view class="detail-c-info edit-form-flex-c" style="padding-bottom:25rpx">
+                    <view class="detail-c-i-border"></view>
+                    <view class="detail-c-title">基本信息</view>
+                </view>
+                <view class="fill-f-cell">
+                    <view class="fill-f-cell-label">姓名：</view>
+                    <view class="fill-f-cell-value">何颖琦</view>
+                </view>
+                <view class="fill-f-cell">
+                    <view class="fill-f-cell-label">性别：</view>
+                    <view class="fill-f-cell-value">男</view>
+                </view>
+                <view class="fill-f-cell">
+                    <view class="fill-f-cell-label">主诊医生：</view>
+                    <view class="fill-f-cell-value">何思颖</view>
+                </view>
+                <view class="fill-f-cell">
+                    <view class="fill-f-cell-label">医生助理：</view>
+                    <view class="fill-f-cell-value">何思颖</view>
+                </view>
+                <view class="fill-f-cell">
+                    <view class="fill-f-cell-label">上次就诊时间：</view>
+                    <view class="fill-f-cell-value">2021/10/12</view>
+                </view>
+                <view class="fill-f-cell">
+                    <view class="fill-f-cell-label">年龄：</view>
+                    <view class="fill-f-cell-value">10</view>
+                </view>
+            </view>
+            <!-- 问诊单 -->
+            <view>
+                <view class="detail-c-info edit-form-flex-c" style="padding:20rpx 0 25rpx">
+                    <view class="detail-c-i-border"></view>
+                    <view class="detail-c-title">问诊单</view>
+                </view>
+                <view class="fill-f-cell">
+                    <view class="fill-f-cell-label">请问宝贝是否有按医嘱佩戴诱导器：</view>
+                    <view class="fill-f-cell-value">否</view>
+                </view>
+                <view class="fill-f-cell">
+                    <view class="fill-f-cell-label">请问宝贝是否有按医嘱佩戴诱导器：</view>
+                    <view class="fill-f-cell-value">原因内容原因内容原因内容原因内容原因内容原因内容原因内容原因内容</view>
+                </view>
+                <view class="fill-f-cell">
+                    <view class="fill-f-cell-label">宝贝平均每日佩戴小时数：</view>
+                    <view class="fill-f-cell-value">12</view>
+                </view>
+                <view class="fill-f-cell">
+                    <view class="fill-f-cell-label">请具体描述不适感：</view>
+                    <view class="fill-f-cell-value">
+                        不适感描述不适感描述不适感描述不适感描述不适感描述不适感描述不适感描述不适感描述不适感描述不适感描述
+                    </view>
+                </view>
+                <view class="fill-f-cell">
+                    <view class="fill-f-cell-label">请问您还有什么问题想问医生：</view>
+                    <view class="fill-f-cell-value">问题补充问题补充问题补充问题补充问题补充</view>
+                </view>
+            </view>
+            <!-- 照片 -->
+            <view>
+                <view class="detail-c-info edit-form-flex-c" style="padding:20rpx 0 25rpx">
+                    <view class="detail-c-i-border"></view>
+                    <view class="detail-c-title">照片</view>
+                </view>
+                <view wx:for="{{photoItem}}" wx:key="index" style="margin-bottom: 24rpx">
+                    <image wx:if="{{index < 2}}" mode="{{imageMode}}" class="fill-cell-photo" src="/images/photo/photoMb.png" />
+                    <image wx:if="{{index >= 2}}" mode="{{imageMode}}" class="fill-cell-photo" src="/images/photo/photoDefault.png" />
+                    <view class="edit-form-cell">
+                        <view class="edit-cell-label">{{item.label}}</view>
+                        <view class="edit-cell-input">
+                            <input class="edit-input" placeholder-class="input-placeholder" placeholder="可补充描述一下宝贝近期状况" type="text" />
+                        </view>
+                    </view>
+                </view>
+            </view>
+        </view>
+        <view class="fill-footer fill-footer-qr">
+           <view class="fill-footer-btn-wap fill-footer-photo">
+                <button class="fill-f-btn btn" data-index="1" bind:tap="handleChangeStep" style="width:209rpx;background:#BBDEFF">
+                上一步
+                </button>
+                <button class="fill-f-btn btn" data-index="save" bind:tap="handleChangeStep" style="width:455rpx">
+                    保存草稿
+                </button>
+                <button class="fill-f-btn btn" data-index="submit" bind:tap="handleChangeStep" style="width:100%;margin-top: 17rpx">
+                    确认提交
+                </button>
+           </view>
+        </view>
+    </view>
+</view>

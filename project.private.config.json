@@ -1,0 +1,90 @@
+{
+    "setting": {},
+    "condition": {
+        "plugin": {
+            "list": []
+        },
+        "game": {
+            "list": []
+        },
+        "gamePlugin": {
+            "list": []
+        },
+        "miniprogram": {
+            "list": [
+                {
+                    "name": "线上详情",
+                    "pathName": "pages/index/onlineDetail/onlineDetail",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "线上记录",
+                    "pathName": "pages/user/onlineRecord/onlineRecord",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "登陆",
+                    "pathName": "pages/login/login",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "消息详情",
+                    "pathName": "pages/info/infoDetail/infoDetail",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "填写复诊",
+                    "pathName": "pages/fillVisit/fillVisit",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "历史",
+                    "pathName": "pages/index/history/history",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "线上复诊病例",
+                    "pathName": "pages/index/online/online",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "信息详情",
+                    "pathName": "pages/info/infoDetail/infoDetail",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "完成",
+                    "pathName": "pages/finish/finish",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "详情",
+                    "pathName": "pages/index/detail/detail",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "消息-沟通记录",
+                    "pathName": "pages/user/gtHistory/gtHistory",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "相册",
+                    "pathName": "pages/album/album",
+                    "query": "",
+                    "scene": null
+                }
+            ]
+        }
+    }
+}

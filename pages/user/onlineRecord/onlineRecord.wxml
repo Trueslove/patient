@@ -1,0 +1,83 @@
+<view class="online-re">
+    <back></back>
+    <view class="online-re-header">
+        <view class="online-re-h-tit">线上复诊</view>
+    </view>
+    <!-- ---------- 患者信息 ------------ -->
+    <view class="history-info-user">
+        <view class="history-left-info">
+            <view class="history-user-left img">
+                <image mode="{{imageMode}}" src="/images/home/userHeader.png"></image>
+            </view>
+        </view>
+        <view class="history-user-right">
+            <view class="history-user-100 history-user-flex">
+                <view class="history-user-name">周国辉</view>
+                <image class="history-user-sex-icon" src="/images/user/nv.png"></image>
+            </view>
+            <view class="history-user-100">
+                <view class="history-user-r-i">0岁 18828838281</view>
+                <view class="history-user-r-i">2009/10/12</view>
+            </view>
+        </view>
+    </view>
+    <!-- ---------- 预约信息 ------------ -->
+    <view class="online-re-tit">线上复诊记录</view>
+    <view class="home-info-wap" bindtap="handleToPageDetail">
+        <view class="home-info-cell" wx:for="{{dataItem}}" wx:key="index">
+            <view class="home-info-user">
+                <view class="home-user-left img">
+                    <image mode="{{imageMode}}" src="/images/home/userHeader.png"></image>
+                </view>
+                <view class="home-user-right">
+                    <view class="home-user-100 home-user-flex">
+                        <view class="home-user-name">赵璇海</view>
+                    </view>
+                    <view class="home-user-100" style="margin-top:-5rpx">门诊主任</view>
+                </view>
+                <image wx:if="{{item.isNew}}" class="home-user-new" src="/images/home/new.png"></image>
+            </view>
+            <view class="home-info-content">
+                <view class="home-info-c-item">
+                    <view class="home-info-label">预约门诊:</view>
+                    <view class="home-info-value">青苗儿童口腔 - 北京火器营门诊</view>
+                </view>
+                <view class="home-info-c-item">
+                    <view class="home-info-label">复诊项目:</view>
+                    <view class="home-info-value">常规治疗复诊</view>
+                </view>
+                <view class="home-info-c-item">
+                    <view class="home-info-label">复诊时间:</view>
+                    <view class="home-info-value">2021年8月11日 12:30-21:00</view>
+                </view>
+                <view class="home-info-c-item">
+                    <view class="home-info-label">创建时间:</view>
+                    <view class="home-info-value">2021年8月11日</view>
+                </view>
+            </view>
+            <!-- -------- 操作按钮 --------- -->
+            <view>
+                <button wx:if="{{item.type == 0}}" class="history-i-btn btn" data-type="online" data-url="/pages/index/online/online" bind:tap="handleToPage">
+                    开始线上复诊
+                </button>
+                <button wx:if="{{item.type == 3}}" class="history-i-btn btn" data-type="online" data-url="/pages/index/online/online" bind:tap="handleToPage">
+                    查看复诊记录
+                </button>
+                <button wx:if="{{item.type == 4}}" class="history-i-btn btn history-jxz-btn" data-type="online" data-url="/pages/index/online/online" bind:tap="handleToPage">
+                    复诊进行中
+                </button>
+                <button wx:if="{{item.type == 5}}" class="history-i-btn btn history-wdq-btn" data-type="online" data-url="/pages/index/online/online" bind:tap="handleToPage">
+                    未到期
+                </button>
+            </view>
+            <view class="online-re-tz-wap" wx:if="{{item.status == 0}}">
+                <image class="online-re-tz-icon" src="/images/user/tz-error.png" />
+                <view>复诊时间已过，请尽快提交复诊资料 ^-^</view>
+            </view>
+            <view class="online-re-tz-wap" wx:if="{{item.status == 1}}">
+                <image class="online-re-tz-icon" src="/images/user/tz-warn.png" />
+                <view style="color: #FFB60C;">复诊资料已提交，请等待医生回复或沟通 ^-^</view>
+            </view>
+        </view>
+    </view>
+</view>

@@ -1,0 +1,91 @@
+<view class="home">
+    <view class="home-header">
+        <image class="home-header-img" src="/images/home/header.png" />
+        <view class="home-header-bj" ></view>
+    </view>
+    <!--------------- 主体内容 ------------ -->
+    <view class="home-content">
+         <!--------------- 咬合诱导线上复诊 ------------ -->
+        <view class="home-c-fz">
+            <view class="home-fz-info-wap">
+                <image class="home-c-fz-ren" src="/images/home/ren.png" />
+                <view class="home-c-fz-info">
+                    <view class="home-fz-i-title">咬合诱导线上复诊</view>
+                    <view class="home-fz-i-cell">
+                        <view class="home-fz-cell-label">门诊</view>
+                        <view class="home-fz-cell-value">青苗儿童口腔-成都锦江门诊</view>
+                    </view>
+                    <view class="home-fz-i-cell">
+                        <view class="home-fz-cell-label">复诊日期</view>
+                        <view class="home-fz-cell-value">2021年8月11日</view>
+                    </view>
+                    <view class="home-fz-i-cell">
+                        <view class="home-fz-cell-label">主任</view>
+                        <view class="home-fz-cell-value home-fz-v-flex">
+                            <image class="home-fz-v-img" mode="{{imageMode}}" src="/images/home/userHeader.png" />
+                            <view>郑贵雅</view>
+                        </view>
+                    </view>
+                    <view class="home-fz-i-cell">
+                        <view class="home-fz-cell-label">创建</view>
+                        <view class="home-fz-cell-value">2021年5月13日</view>
+                    </view>
+                </view>
+            </view>
+            <view class="home-fz-i-btn">
+                <view class="home-fz-flex home-fz-left">
+                    <image class="home-fz-b-tz" src="/images/home/tz.png" />
+                    <view>复诊时间将至，请尽快提交复诊资料</view>
+                </view>
+                <view class="home-fz-flex home-fz-right" data-url="/pages/fillVisit/fillVisit" bind:tap="handleToPage">
+                    <view>开始线上复诊</view>
+                    <image class="home-fz-b-arrow" src="/images/home/arrowLeft.png" />
+                </view>
+            </view>
+        </view>
+         <!--------------- 线上复诊,口腔管理 ------------ -->
+        <view class="home-x-k">
+            <view class="home-xk-cell home-xk-cell-xs" style="margin-right:27rpx">
+                <image class="home-xk-icon" mode="{{imageMode}}" src="/images/home/xsfz.png" />
+                <view class="home-xk-info " style="color: #0F73E3;">
+                    <view class="home-xk-tit">线上复诊</view>
+                    <view class="home-xk-btm">不排队省时间</view>
+                </view>
+            </view>
+            <view class="home-xk-cell home-xk-cell-kq">
+                <image class="home-xk-icon" mode="{{imageMode}}" src="/images/home/kq.png" />
+                <view class="home-xk-info" style="color: #8F5009;">
+                    <view class="home-xk-tit">口腔管理</view>
+                    <view class="home-xk-btm">有问题找专属管家</view>
+                </view>
+            </view>
+        </view>
+         <!--------------- 儿童口腔 ------------ -->
+        <view class="home-children">
+            <view class="home-children-tit">您好，青苗儿童口腔</view>
+            <view class="home-children-info">
+                <image class="home-children-bj" src="/images/home/leftBj.png" />
+                <view class="home-child-cell" wx:for="i in 3">
+                    <view class="home-fz-flex home-child-cell-question">
+                        <image class="home-child-cell-icon" src="/images/home/wen.png" alt=""/>
+                        <view class="home-child-cell-tit">宝宝奶睡会导致蛀牙吗？</view>
+                    </view>
+                    <view class="home-child-cell-answer">
+                        <view class="home-fz-flex home-answer-info">
+                            <image class="home-child-cell-icon" style="margin-top:10rpx" src="/images/home/da.png" alt=""/>
+                            <view class="home-answer-tit">答案是肯定的。因为婴儿含着奶瓶入睡，会容易产生严重的广泛性的乳前牙龋齿，称为“奶瓶龋”。因奶粉中含有大量的糖分，而由于奶瓶喂奶。</view>
+                        </view>
+                        <view class="home-fz-flex home-answer-user">
+                            <image class="home-answer-user-img" mode="{{imageMode}}" src="/images/home/userHeader.png" />
+                            <view class="home-answer-user-info">
+                                <view class="home-answer-name">孙宇峰</view>
+                                <view class="home-answer-js">青苗儿童口腔 - 北京火器营门诊</view>
+                            </view>
+                            <button class="home-answer-btn">详情</button>
+                        </view>
+                    </view>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>
